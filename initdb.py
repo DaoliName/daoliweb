@@ -1,0 +1,11 @@
+from main import *
+db.drop_all()
+db.create_all()
+db.session.add(Application(id=1, name='email', description='Email Address', master=True))
+db.session.add(Application(id=2, name='phone', description='Phone Number'))
+db.session.add(Application(id=3, name='wechat', description='Wechat Number'))
+db.session.add(Application(id=4, name='alipay', description='Alipay Number'))
+db.session.add(Application(id=5, name='dingding', description='Dingding Number'))
+db.session.add(Application(id=6, name='facebook', description='Facebook Username'))
+db.session.add(Application(id=7, name='twitter', description='Twitter Username'))
+db.session.commit()
